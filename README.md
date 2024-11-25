@@ -13,4 +13,4 @@ This is a game that a user guesses the possible 5 letter word answers.
 - Every time the user incorrectly guess the word, chance is getting decreased by 1, and the max score is decreased by 10.
 - If the user wants to give up during the game, they can type "stop" to finish the game.
 - If the user wants to start the game again, the user enters "yes", If not, total score is printed out.
--We got the list of possible answers from https://github.com/bdholt1/five-letter-words/blob/main/sgb-words.txt
+- We got the list of possible answers from https://github.com/bdholt1/five-letter-words/blob/main/sgb-words.txt
