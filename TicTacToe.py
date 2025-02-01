@@ -1,7 +1,7 @@
-
 current_board=[["-", "-", "-"],
                ["-", "-", "-"], 
                ["-", "-", "-"]]
+#Initialize board with "-"
 def main():
 
     
@@ -22,6 +22,8 @@ def print_board(board):
             line += board[r][c] + " | "
         print(line)
         print("------------")
+
+#print board shape
     
 def update_board(new_value):
     if new_value=="X":
@@ -31,13 +33,18 @@ def update_board(new_value):
     elif new_value=="O":
         row_index, col_index=index_CheckO()
         next_new_value="X"
-
+      
+    #Based on new value, indexCheck function is called.
+    #Then, assign next value to be opposite of current new value
+  
     if(current_board[row_index][col_index]=="-"):
         current_board[row_index][col_index]=new_value
     else:
         print("This position is taken by other players. Please choose other position again.")
         update_board(new_value)
 
+  #Once a spot is taken, user cannot replace with "O" or "X"
+  
     print("This is the updated board:")
     print_board(current_board)
 
@@ -51,7 +58,9 @@ def update_board(new_value):
     
     else:
         update_board(next_new_value)
-        
+
+#Call check_for_win and check_for_tie to see the status of game. If it is not finished, call update_board funciton.
+
 def index_CheckX():
     row_index, col_index=map(int,input(" Write the index you want to add X ").split())
     while(row_index>2 or row_index<0 or col_index<0 or col_index>2 ):
@@ -69,7 +78,7 @@ def index_CheckO():
 
     return row_index,col_index
 
-
+#Check if the input index is an appropriate index. If not, ask for index until it is appropriate.
 
 
 def check_for_win(board):
@@ -98,12 +107,11 @@ def check_for_win(board):
     
      return (None)
 
-    # TODO: complete this function
     # This function takes a board and returns if there is a winner or not.
     # If there is a winner, return who the winner is. ("O" or "X")
     # If there is no winner, return None
-    # You should check for all possible conditions (three horizontal lines, three vertical lines, and two diagonal lines)
-    # Try to do this as efficiently as possible using multiple for loops
+    # It checks for all possible conditions (three horizontal lines, three vertical lines, and two diagonal lines)
+ 
 
 
 def check_for_tie(board):
@@ -119,10 +127,10 @@ def check_for_tie(board):
         return False  
 
 
-    # TODO: complete this function
+ 
     # This function takes a board and returns a boolean value.
     # In Tic Tac Toe, the game can end without a winner. This function checks if the game ended without a winner.
-    # First, check if the board is full. (You can do this by checking if we have a "-".)
+    # First, check if the board is full. (Checking if we have a "-".)
     # Then, check_for_win. If check_for_win returns None, we have a tie.
     # If we have a tie, return True. If not, return False
     
@@ -144,5 +152,7 @@ def turn_choose():
         print(" Choose either O or X!")
         turn_choose()
     return None
+
+# Determine who is going to start first between "O" and "X".
 
 main()
