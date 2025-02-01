@@ -1,3 +1,16 @@
+#Start the game by choosing a person to start first by typing "X" or "O"
+#Type desired index for placement
+#After index is checked appropriately, O or X is recorded on the board
+#Other user do the same process
+#Play game until one shape appears three times in a row
+# O O O    O                  O
+#       or    O      or       O   same for x
+#               O             O
+
+#If board is full and not finished, it is tie
+
+
+
 current_board=[["-", "-", "-"],
                ["-", "-", "-"], 
                ["-", "-", "-"]]
