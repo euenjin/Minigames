@@ -15,5 +15,9 @@ This is a game that a user guesses the possible 5 letter word answers.
 - If the user wants to start the game again, the user enters "yes", If not, total score is printed out.
 - We got the list of possible answers from https://github.com/bdholt1/five-letter-words/blob/main/sgb-words.txt
 ### TicTacToe
-
+This is a game that two users choose their own shape (O or X) and place it on the board alternatively.
+-if the same shape is placed three times in a row in any direction(horizontal, vertical, diagonal), the player of the shape wins the game.
+-Once a shape is placed, it cannot be replaced.
+-If the board if full and there is no winner, game finishes with tie.
+-
 ### Tower of Hanoi
