@@ -22,17 +22,17 @@ This is a two-player game where each user selects their own shape (O or X) and t
 - If a player enters an invalid index, an error message will be displayed and the player will be asked to enter the index again.
 - After each turn, the updated board will be printed in the terminal.
 ### Tower of Hanoi
-This is a classic puzzle game: move all disks from choosen tower to 
+This is a classic puzzle game: move all disks from tower 0 tower to tower 2.
 
-User chooses number of disks (recommended: ≤ 6).
+- User chooses number of disks (recommended: ≤ 6).
 
-Disks are moved one at a time, larger disks cannot be placed on smaller ones.
+- Disks are moved one at a time, larger disks cannot be placed on smaller ones.
 
-Game tracks and displays number of moves.
+- Game tracks and displays number of moves.
 
-Board is updated and printed after each move.
+- Board is updated and printed after each move.
 
-Invalid inputs (e.g., tower out of range or illegal move) prompt retry.
+- Invalid inputs (e.g., tower out of range or illegal move) prompt retry.
 
-Game ends when all disks are correctly stacked on the third tower.
+- Game ends when all disks are correctly stacked on the third tower.
 
